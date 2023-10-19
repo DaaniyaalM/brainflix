@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import { useState } from "react";
+import videoData from "./assets/Data/video-details.json";
+import "./App.scss";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import NewVideos from "./components/NewVideos/NewVideos";
+import Comments from "./components/Comments/Comments";
+import Body from "./components/Body/Body";
+import "../src/components/NewVideos/NewVideos.scss";
 
 function App() {
+  const [videos, setVideos] = useState(videoData);
+  const [selectedVideo, setSelectedVideo] = useState(videos[0]);
+
+  function clickHandler(video) {
+    console.log("test");
+    console.log(video.id);
+    // const foundVideo = videos.find((videoObj) => videoObj.id === video.id);
+    // console.log(foundVideo);
+    setSelectedVideo(video);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <video controls poster={selectedVideo.image}></video>
+      <Comments />
+      <Body />
+      <NewVideos
+        videos={videos}
+        selectedVideo={selectedVideo}
+        clickHandler={clickHandler}
+        // setSelectedVideo={setSelectedVideo}
+      />
+      {/* <h2>{selectedVideo.name}</h2>
+      <img src={selectedVideo.image} alt={selectedVideo.name} />
+      <ul>
+        {selectedVideo.image.map((image, index) => (
+          <li key={index}>{image}</li>
+        ))} */}
+      {/* </ul> */}
+      <h3>Video List</h3>
     </div>
   );
 }
