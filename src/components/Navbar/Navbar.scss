@@ -1,7 +1,21 @@
-.navbar__searchcontainer {
+.navbar {
   display: flex;
-}
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 
-.navbar__search {
-  background-color: #e1e1e1;
+  &__searchcontainer {
+    display: flex;
+  }
+
+  &__search {
+    border: none;
+    background-color: #fafafa;
+  }
+  &__search-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fafafa;
+  }
 }

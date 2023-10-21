@@ -30,15 +30,8 @@ function App() {
         videos={videos}
         selectedVideo={selectedVideo}
         clickHandler={clickHandler}
-        // setSelectedVideo={setSelectedVideo}
       />
-      {/* <h2>{selectedVideo.name}</h2>
-      <img src={selectedVideo.image} alt={selectedVideo.name} />
-      <ul>
-        {selectedVideo.image.map((image, index) => (
-          <li key={index}>{image}</li>
-        ))} */}
-      {/* </ul> */}
+
       <h3>Video List</h3>
     </div>
   );
