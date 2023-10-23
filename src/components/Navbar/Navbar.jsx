@@ -24,6 +24,7 @@ function Navbar(props) {
             className="navbar__search"
           ></input>
         </div>
+
         <div className="profile-picture"></div>
       </div>
       <button className="navbar__upload"></button>

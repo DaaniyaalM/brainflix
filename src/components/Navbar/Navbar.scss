@@ -13,6 +13,14 @@
 }
 
 .navbar {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -68,4 +76,9 @@
   background-position: center;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -22,17 +22,21 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <video controls poster={selectedVideo.image}></video>
-      <Body />
-      <Comments />
-      <Comments2 />
-      <NewVideos
-        videos={videos}
-        selectedVideo={selectedVideo}
-        clickHandler={clickHandler}
-      />
-
-      <h3>Video List</h3>
+      <div className="video__background">
+        <video controls poster={selectedVideo.image}></video>
+      </div>
+      <div className="body__alignment">
+        <div className="body__comments-container">
+          <Body />
+          <Comments />
+          <Comments2 />
+        </div>
+        <NewVideos
+          videos={videos}
+          selectedVideo={selectedVideo}
+          clickHandler={clickHandler}
+        />
+      </div>
     </div>
   );
 }

@@ -5,6 +5,9 @@
 }
 
 video {
+  @include desktop {
+    max-width: 50vw;
+  }
   width: 100%;
   align-self: center;
 }
@@ -25,4 +28,25 @@ div.App {
   src: url("../src/assets/Font/Alternative files/AvenirNextLTProBold.ttf")
     format("truetype");
   font-weight: bold;
+}
+
+.body__alignment {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.body__comments-container {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.video__background {
+  @include desktop {
+    justify-content: space-around;
+    display: flex;
+    background-color: black;
+  }
 }
