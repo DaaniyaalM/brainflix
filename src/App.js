@@ -1,10 +1,10 @@
-// import logo from "./logo.svg";
 import { useState } from "react";
 import videoData from "./assets/Data/video-details.json";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import NewVideos from "./components/NewVideos/NewVideos";
 import Comments from "./components/Comments/Comments";
+import Comments2 from "./components/Comments/Comments2";
 import Body from "./components/Body/Body";
 import "../src/components/Body/Body.scss";
 import "../src/components/NewVideos/NewVideos.scss";
@@ -16,8 +16,6 @@ function App() {
   function clickHandler(video) {
     console.log("test");
     console.log(video.id);
-    // const foundVideo = videos.find((videoObj) => videoObj.id === video.id);
-    // console.log(foundVideo);
     setSelectedVideo(video);
   }
 
@@ -27,6 +25,7 @@ function App() {
       <video controls poster={selectedVideo.image}></video>
       <Body />
       <Comments />
+      <Comments2 />
       <NewVideos
         videos={videos}
         selectedVideo={selectedVideo}

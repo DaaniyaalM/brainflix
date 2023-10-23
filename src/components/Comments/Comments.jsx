@@ -1,3 +1,5 @@
+import commentsData from "../../assets/Data/video-details.json";
+
 function Comments() {
   return (
     <div className="comment-section">
