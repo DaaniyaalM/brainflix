@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../../../src\assets/Font/Alternative files/AvenirNextLTPro.ttf")
+    format("ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url("../../../src/assets/Font/Alternative files/AvenirNextLTProBold.ttf");
+  font-weight: bold;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -7,6 +20,8 @@
 
   &__searchcontainer {
     display: flex;
+    font-family: "avenir";
+    height: 2rem;
   }
 
   &__search {

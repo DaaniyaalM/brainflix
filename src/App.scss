@@ -1,9 +1,22 @@
 video {
-  width: 50vw;
+  width: 100%;
   align-self: center;
 }
 
 div.App {
   display: flex;
   flex-direction: column;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../src/assets/Font/Alternative files/AvenirNextLTPro.ttf")
+    format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url("../src/assets/Font/Alternative files/AvenirNextLTProBold.ttf")
+    format("truetype");
+  font-weight: bold;
 }

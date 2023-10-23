@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import NewVideos from "./components/NewVideos/NewVideos";
 import Comments from "./components/Comments/Comments";
 import Body from "./components/Body/Body";
+import "../src/components/Body/Body.scss";
 import "../src/components/NewVideos/NewVideos.scss";
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
     <div className="App">
       <Navbar />
       <video controls poster={selectedVideo.image}></video>
-      <Comments />
       <Body />
+      <Comments />
       <NewVideos
         videos={videos}
         selectedVideo={selectedVideo}

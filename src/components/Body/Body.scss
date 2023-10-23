@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../../../src/assets/Font/Alternative files/AvenirNextLTPro.ttf")
+    format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url("../../../src/assets/Font/Alternative files/AvenirNextLTProBold.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+.body {
+  &__header {
+    font-size: 1.5rem;
+    font-family: "avenir";
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  &__details {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px #e1e1e1;
+    border-bottom: 2px #e1e1e1;
+  }
+}
+
+.details {
+  &__name {
+    font-family: "avenir";
+    font-weight: bold;
+    display: flex;
+  }
+
+  &__date {
+    font-family: "avenir";
+  }
+
+  &__views {
+    font-family: "avenir";
+  }
+
+  &__likes {
+    font-family: "avenir";
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+  }
+  &__stats2 {
+    display: flex;
+    flex-direction: column;
+  }
+  &__views-icon {
+    display: flex;
+  }
+  &__likes-icon {
+    display: flex;
+  }
+}
