@@ -4,13 +4,14 @@ import "./Comments2.scss";
 function Comments2() {
   return (
     <div>
-      <h2>Comments</h2>
       {commentsData[0].comments.map((comment) => (
         <div key={comment.id} className="comment">
-            
-          <h3 class="comments__name">{comment.name}</h3>
-          <p class="comments__comments">{comment.comment}</p>
-          <p class="comments__date">
+          <div className="comments__dp"></div>
+          <div className="comments__name-container">
+            <h3 className="comments__name">{comment.name}</h3>
+            <p className="comments__comments">{comment.comment}</p>
+          </div>
+          <p className="comments__date">
             {new Date(comment.timestamp).toLocaleDateString()}
           </p>
         </div>

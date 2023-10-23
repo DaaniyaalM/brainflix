@@ -18,11 +18,11 @@
   flex-wrap: wrap;
   width: 100%;
 
-  &__searchcontainer {
-    display: flex;
-    font-family: "avenir";
-    height: 2rem;
-  }
+  // &__searchcontainer {
+  //   display: flex;
+  //   font-family: "avenir";
+  //   height: 2rem;
+  // }
 
   &__search {
     border: none;
@@ -32,5 +32,39 @@
     display: flex;
     flex-direction: row;
     background-color: #fafafa;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    width: 85%;
+    height: 2.5rem;
+    border-radius: 3px;
   }
+  &__upload {
+    //background-image: url("../../assets/Icons/upload.svg");
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 3rem;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #0095ff;
+  }
+  &__row {
+    display: flex;
+    width: 80%;
+  }
+  &__main-icon {
+    align-self: center;
+  }
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("../../assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }

@@ -1,6 +1,22 @@
 .comments {
   &__name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: "avenir";
+  }
+  &__dp {
+    background-color: #e1e1e1;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 8px;
+    flex-shrink: 0;
+  }
+  &__comments {
+    font-family: "avenir";
+  }
+
+  .comment {
+    display: flex;
+    border-top: 2px solid #e1e1e1;
   }
 }
