@@ -1,3 +1,5 @@
+@import "./Partials.scss";
+
 .NewVideos {
   &__video {
     width: 50%;
@@ -7,5 +9,21 @@
   }
   &__videolist {
     list-style: none;
+    border-top: 2px solid #e1e1e1;
+    margin-left: 1rem;
+  }
+  &__title {
+    color: #afafaf;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__wrapper {
+      flex-direction: column;
+      margin-left: 1rem;
+    }
   }
 }

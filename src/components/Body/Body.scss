@@ -1,3 +1,5 @@
+@import "./Partials.scss";
+
 @font-face {
   font-family: "avenir";
   src: url("../../../src/assets/Font/Alternative files/AvenirNextLTPro.ttf")
@@ -18,12 +20,14 @@
     font-family: "avenir";
     padding-left: 1rem;
     padding-top: 1rem;
+    margin-left: 1rem;
   }
   &__details {
     display: flex;
     justify-content: space-around;
-    border-top: 2px #e1e1e1;
-    border-bottom: 2px #e1e1e1;
+    border-top: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+    margin-left: 1rem;
   }
 }
 
@@ -59,5 +63,8 @@
   }
   &__likes-icon {
     display: flex;
+  }
+  &__text {
+    margin-left: 1rem;
   }
 }

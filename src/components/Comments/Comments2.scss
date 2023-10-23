@@ -1,3 +1,5 @@
+@import "./Partials.scss";
+
 .comments {
   &__name {
     font-size: 1rem;
@@ -14,9 +16,10 @@
   &__comments {
     font-family: "avenir";
   }
+}
 
-  .comment {
-    display: flex;
-    border-top: 2px solid #e1e1e1;
-  }
+.comment {
+  display: flex;
+  border-top: 2px solid #e1e1e1;
+  margin-left: 1rem;
 }
