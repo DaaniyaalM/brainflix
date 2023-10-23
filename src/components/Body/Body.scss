@@ -51,10 +51,18 @@
   }
 
   &__stats {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
     display: flex;
     flex-direction: column;
   }
   &__stats2 {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
     display: flex;
     flex-direction: column;
   }
