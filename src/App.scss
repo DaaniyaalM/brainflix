@@ -40,6 +40,7 @@ div.App {
   @include desktop {
     display: flex;
     flex-direction: column;
+    border-right: 0.125rem solid #e1e1e1;
   }
 }
 

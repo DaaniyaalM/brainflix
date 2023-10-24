@@ -24,10 +24,10 @@ function Navbar(props) {
             className="navbar__search"
           ></input>
         </div>
-
+        <button className="navbar__upload-desktop">Upload</button>
         <div className="profile-picture"></div>
       </div>
-      <button className="navbar__upload"></button>
+      <button className="navbar__upload">Upload</button>
     </div>
   );
 }
