@@ -1,11 +1,9 @@
 function NewVideos(props) {
-  // console.log(props);
   return (
     <ul className="NewVideos__videolist">
       {props.videos
         .filter((video) => video.id !== props.selectedVideo.id)
         .map((video) => {
-          // console.log(video.image);
           return (
             <li
               className="NewVideos__list"
