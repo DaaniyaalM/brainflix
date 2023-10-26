@@ -13,7 +13,7 @@ function Comments() {
             <div className="profile-picture"></div>
 
             <label className="comments__label" htmlFor="comment"></label>
-            <div class="comments__friendshipwrapper">
+            <div className="comments__friendshipwrapper">
               <h2 className="comments__title">Join The Conversation</h2>
               <textarea className="comments__text" required=""></textarea>
             </div>

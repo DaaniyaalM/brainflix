@@ -9,12 +9,12 @@ function Body() {
         BMX Rampage: 2021 <br></br> Highlights
       </h1>
       <div className="body__details">
-        <div clasName="details__stats">
+        <div className="details__stats">
           <p className="details__name">By Red Crow</p>
 
           <p className="details__date">07/11/2021</p>
         </div>
-        <div clasName="details__stats2">
+        <div className="details__stats2">
           <div className="details__views-icon">
             <img src={ViewsPic} alt="Views" />
             <p className="details__views">1,001,023</p>

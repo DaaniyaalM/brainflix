@@ -49,7 +49,9 @@ const Upload = () => {
           placeholder="Add a description for your video"
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <button className="Upload__button" type="submit">
+          PUBLISH
+        </button>
       </form>
     </div>
   );

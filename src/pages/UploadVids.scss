@@ -8,14 +8,39 @@
   &__thumbnail {
     border-radius: 0.25rem;
     width: 100%;
+  }
+  &__header {
+    color: black;
+  }
 
-    &__header {
-      color: black;
-    }
+  &__text {
+    color: #afafaf;
+    font-family: "avenir";
+  }
 
-    &__text {
-      color: #afafaf;
-      font-family: "avenir";
-    }
+  &__title-input {
+    height: 1rem;
+    max-width: 100%;
+    min-width: 15rem;
+    padding: 0.75rem;
+    border: 1px solid #e1e1e1;
+  }
+  &__description-input {
+    height: 2.25rem;
+    max-width: 100%;
+    min-width: 15rem;
+    padding: 0.75rem;
+    border: 1px solid #e1e1e1;
+  }
+  &__button {
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 3rem;
+    border-radius: 0.25rem;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #0095ff;
+    color: white;
   }
 }
