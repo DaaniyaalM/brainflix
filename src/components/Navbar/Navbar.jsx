@@ -1,15 +1,18 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import SearchPic from "../../assets/Icons/search.svg";
 import LogoPic from "../../assets/Logo/BrainFlix-logo.svg";
 import "./Navbar.scss";
 
-function Navbar(props) {
-  function searchHandler() {
-    console.log("button pressed");
-  }
+function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__main-icon">
-        <img src={LogoPic} alt="Logo" />
+        <Link to="/">
+          {" "}
+          {/* Link to your home page */}
+          <img src={LogoPic} alt="Logo" />
+        </Link>
       </div>
       <div className="navbar__row">
         <div className="navbar__search-container">
@@ -20,14 +23,19 @@ function Navbar(props) {
           <input
             type="search"
             placeholder="Search"
-            onKeyDown={searchHandler}
             className="navbar__search"
-          ></input>
+          />
         </div>
-        <button className="navbar__upload-desktop">Upload</button>
+        <Link to="/upload">
+          {" "}
+          <button className="navbar__upload-desktop">Upload</button>
+        </Link>
         <div className="profile-picture"></div>
       </div>
-      <button className="navbar__upload">Upload</button>
+      <Link to="/upload">
+        {" "}
+        <button className="navbar__upload">Upload</button>
+      </Link>
     </div>
   );
 }

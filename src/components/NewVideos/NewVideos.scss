@@ -3,7 +3,7 @@
 .NewVideos {
   &__video {
     width: 50%;
-    max-height: 10rem;
+    aspect-ratio: 5/3;
     margin: 1rem;
     max-width: 13.5rem;
     background-color: #e1e1e1;
@@ -13,6 +13,17 @@
     max-width: 50vw;
   }
   &__videolist {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 5/3;
+      align-items: baseline;
+    }
     list-style: none;
     border-top: 2px solid #e1e1e1;
     margin-left: 1rem;

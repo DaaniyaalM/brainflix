@@ -19,7 +19,6 @@ import Upload from "./pages/UploadVids";
 
 function App() {
   // const [videos, setVideos] = useState(videoData);
-  // const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
   // function clickHandler(video) {
   //   setSelectedVideo(video);

@@ -20,7 +20,7 @@ function NewVideos(props) {
       }
     }
 
-    fetchData(); // Fetch data when the component is mounted
+    fetchData();
   }, []);
 
   const clickHandler = (video) => {

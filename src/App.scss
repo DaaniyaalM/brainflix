@@ -1,12 +1,15 @@
-@import "./Partials.scss";
-
-* {
-  font-family: "avenir";
-}
-
+@import "./partials.scss";
 video {
   @include desktop {
-    max-width: 50vw;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background-color: black;
+  }
+  @include tablet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   width: 100%;
   align-self: center;
@@ -15,39 +18,4 @@ video {
 div.App {
   display: flex;
   flex-direction: column;
-}
-@font-face {
-  font-family: "avenir";
-  src: url("../src/assets/Font/Alternative files/AvenirNextLTPro.ttf")
-    format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "avenir";
-  src: url("../src/assets/Font/Alternative files/AvenirNextLTProBold.ttf")
-    format("truetype");
-  font-weight: bold;
-}
-
-.body__alignment {
-  @include desktop {
-    display: flex;
-  }
-}
-
-.body__comments-container {
-  @include desktop {
-    display: flex;
-    flex-direction: column;
-    border-right: 0.125rem solid #e1e1e1;
-  }
-}
-
-.video__background {
-  @include desktop {
-    justify-content: space-around;
-    display: flex;
-    background-color: black;
-  }
 }

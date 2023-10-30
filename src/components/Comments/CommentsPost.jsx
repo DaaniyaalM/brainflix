@@ -1,4 +1,4 @@
-import "./Comments.scss";
+import "./CommentsPost.scss";
 
 function Comments() {
   return (

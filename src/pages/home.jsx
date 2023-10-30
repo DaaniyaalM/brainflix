@@ -1,33 +1,30 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import NewVideos from "../components/NewVideos/NewVideos";
-import Comments from "../components/Comments/Comments";
+import Comments from "../components/Comments/CommentsPost";
 import Comments2 from "../components/Comments/Comments2";
 import Body from "../components/Body/Body";
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import axios from "axios";
-import { useState } from "react";
 
 function Home(props) {
-  //   function GoalPost() {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { id } = useParams();
-  console.log(id);
 
-  async function fetchData() {
-    try {
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos/${id}?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
-      );
-      setSelectedVideo(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
   useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `https://project-2-api.herokuapp.com/videos/${id}?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
+        );
+        setSelectedVideo(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
     fetchData();
   }, [id]);
-  //   }
+
   return (
     <div className="home">
       <div className="video__background">
@@ -35,9 +32,16 @@ function Home(props) {
       </div>
       <div className="body__alignment">
         <div className="body__comments-container">
-          <Body />
-          <Comments />
-          <Comments2 />
+          <Body video={selectedVideo} />{" "}
+          {/* Pass the selected video as a prop to Body */}
+          <Comments
+            comments={selectedVideo ? selectedVideo.comments : []}
+          />{" "}
+          {/* Pass the comments array as a prop to Comments */}
+          <Comments2
+            comments={selectedVideo ? selectedVideo.comments : []}
+          />{" "}
+          {/* Pass the comments array as a prop to Comments2 */}
         </div>
         <NewVideos />
       </div>
