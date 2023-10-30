@@ -48,10 +48,14 @@ const Upload = () => {
           onChange={handleDescriptionChange}
           placeholder="Add a description for your video"
         ></textarea>
-
-        <button className="Upload__button" type="submit">
-          PUBLISH
-        </button>
+        <div className="Button__container">
+          <button className="Upload__button" type="submit">
+            PUBLISH
+          </button>
+          <button className="Cancel__button" type="submit">
+            CANCEL
+          </button>
+        </div>
       </form>
     </div>
   );
