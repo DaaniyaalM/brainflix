@@ -5,18 +5,31 @@ import NewVideos from "../components/NewVideos/NewVideos";
 import Comments from "../components/Comments/CommentsPost";
 import Comments2 from "../components/Comments/Comments2";
 import Body from "../components/Body/Body";
+import { useNavigate } from "react-router-dom";
 
 function Home(props) {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const navigateToVideo = (videoId) => {
+    navigate(`/videos/${videoId}`);
+  };
+
+  let videoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
 
   useEffect(() => {
     async function fetchData() {
+      if (id) {
+        videoId = id;
+      }
       try {
         const response = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${id}?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
+          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
         );
         setSelectedVideo(response.data);
+        navigateToVideo("84e96018-4022-434e-80bf-000ce4cd12b8");
+        console.log(navigateToVideo);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -33,15 +46,8 @@ function Home(props) {
       <div className="body__alignment">
         <div className="body__comments-container">
           <Body video={selectedVideo} />{" "}
-          {/* Pass the selected video as a prop to Body */}
-          <Comments
-            comments={selectedVideo ? selectedVideo.comments : []}
-          />{" "}
-          {/* Pass the comments array as a prop to Comments */}
-          <Comments2
-            comments={selectedVideo ? selectedVideo.comments : []}
-          />{" "}
-          {/* Pass the comments array as a prop to Comments2 */}
+          <Comments comments={selectedVideo ? selectedVideo.comments : []} />
+          <Comments2 comments={selectedVideo ? selectedVideo.comments : []} />
         </div>
         <NewVideos />
       </div>

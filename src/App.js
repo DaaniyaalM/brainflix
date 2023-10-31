@@ -28,8 +28,8 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/videos/:id" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/videos/:id" element={<Home />} />
           <Route path="upload" element={<Upload />} />
         </Routes>
       </div>
