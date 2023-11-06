@@ -7,6 +7,9 @@
   font-family: "avenir";
 
   &__thumbnail {
+    @include desktop {
+      background-size: 50%;
+    }
     @include tablet {
       margin: 2rem;
     }
@@ -61,7 +64,21 @@
     background-color: #0095ff;
     color: white;
     text-decoration: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__media-modifier {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__form {
+    @include desktop {
+      display: flex;
+    }
   }
 }
 .Cancel__button {
