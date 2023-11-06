@@ -10,9 +10,7 @@ function NewVideos(props) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
-        );
+        const response = await axios.get(`http://localhost:8080/video`);
         const data = response.data;
         setVideos(data);
       } catch (error) {

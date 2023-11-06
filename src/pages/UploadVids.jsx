@@ -1,6 +1,7 @@
 import { useState } from "react";
 import uploadThumbnail from "../assets/Images/Upload-video-preview.jpg";
 import "./UploadVids.scss";
+import axios from "axios";
 
 const Upload = () => {
   const [videoTitle, setVideoTitle] = useState("");
@@ -19,6 +20,19 @@ const Upload = () => {
     // You can handle form submission logic here
     console.log("Title:", videoTitle);
     console.log("Description:", videoDescription);
+
+    // Assuming you want to show an alert when the request is successful
+    axios
+      .post("http://localhost:8080/upload", {
+        title: videoTitle,
+        description: videoDescription,
+      })
+      .then(() => {
+        alert("Video added successfully");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -52,7 +66,7 @@ const Upload = () => {
           <button className="Upload__button" type="submit">
             PUBLISH
           </button>
-          <button className="Cancel__button" type="submit">
+          <button className="Cancel__button" type="button">
             CANCEL
           </button>
         </div>

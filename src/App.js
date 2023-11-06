@@ -1,5 +1,4 @@
 import { useState } from "react";
-import videoData from "./assets/Data/video-details.json";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import "../src/components/Body/Body.scss";

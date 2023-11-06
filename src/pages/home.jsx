@@ -25,10 +25,10 @@ function Home(props) {
       }
       try {
         const response = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4d5d21ae-edea-4a33-9ca5-1fba865a0254`
+          `http://localhost:8080/videos/${videoId}`
         );
         setSelectedVideo(response.data);
-        navigateToVideo("84e96018-4022-434e-80bf-000ce4cd12b8");
+        // navigateToVideo("84e96018-4022-434e-80bf-000ce4cd12b8");
         console.log(navigateToVideo);
       } catch (error) {
         console.error("Error fetching data:", error);
