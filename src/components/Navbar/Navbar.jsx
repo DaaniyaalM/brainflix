@@ -9,8 +9,6 @@ function Navbar() {
     <div className="navbar">
       <div className="navbar__main-icon">
         <Link to="/">
-          {" "}
-          {/* Link to your home page */}
           <img src={LogoPic} alt="Logo" />
         </Link>
       </div>

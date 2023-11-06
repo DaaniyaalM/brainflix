@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
 import uploadThumbnail from "../assets/Images/Upload-video-preview.jpg";
 import "./UploadVids.scss";
 import axios from "axios";
@@ -17,17 +18,20 @@ const Upload = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
-    console.log("Title:", videoTitle);
-    console.log("Description:", videoDescription);
 
-    // Assuming you want to show an alert when the request is successful
+    // Create a video object with hardcoded values
+    const video = {
+      title: videoTitle,
+      description: videoDescription,
+      thumbnail: "path/to/hardcoded-image.jpg", // Replace with your image path
+      otherProperty: "./Some other placeholder value", // Add other properties as needed
+    };
+
+    // Send the video object to the server
     axios
-      .post("http://localhost:8080/upload", {
-        title: videoTitle,
-        description: videoDescription,
-      })
+      .post("http://localhost:8080/upload", video)
       .then(() => {
+        // No navigation here, just a successful alert
         alert("Video added successfully");
       })
       .catch((error) => {
@@ -63,12 +67,9 @@ const Upload = () => {
           placeholder="Add a description for your video"
         ></textarea>
         <div className="Button__container">
-          <button className="Upload__button" type="submit">
-            PUBLISH
-          </button>
-          <button className="Cancel__button" type="button">
-            CANCEL
-          </button>
+          <NavLink className="Upload__button" to="/">
+            Publish
+          </NavLink>
         </div>
       </form>
     </div>
