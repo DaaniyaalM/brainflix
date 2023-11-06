@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 import uploadThumbnail from "../assets/Images/Upload-video-preview.jpg";
 import "./UploadVids.scss";
 import axios from "axios";
@@ -7,8 +7,7 @@ import axios from "axios";
 const Upload = () => {
   const [videoTitle, setVideoTitle] = useState("");
   const [videoDescription, setVideoDescription] = useState("");
-  const navigate = useNavigate(); // Use useNavigate to handle navigation
-
+  const navigate = useNavigate();
   const handleTitleChange = (e) => {
     setVideoTitle(e.target.value);
   };
@@ -23,7 +22,7 @@ const Upload = () => {
     const video = {
       title: videoTitle,
       description: videoDescription,
-      thumbnail: "http://localhost:8080/images/image0", // Fix the URL here
+      thumbnail: "http://localhost:8080/images/image0",
     };
 
     axios
